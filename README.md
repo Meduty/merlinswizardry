@@ -57,7 +57,7 @@ Users have the right to:
 
 **Data Controller**: Merlin's Wizardry
 
-**Email**: privacy@merlinswizardry.com
+**Email**: merlin@meduty.at
 
 For privacy concerns, data protection inquiries, or to exercise your data rights, please contact us at the email above.
 
