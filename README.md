@@ -1,40 +1,40 @@
-# Merlin's Wizardry - Votery Documentation
+# Merlin's Wizardry - Lottery of Choice Documentation
 
-This repository contains the documentation and privacy information pages for **Votery**, a polling and voting application developed by Merlin's Wizardry.
+This repository contains the documentation and privacy information pages for **Lottery of Choice**, a fast, pass-and-play party game for making group decisions developed by Merlin's Wizardry.
 
-## About Votery
+## About Lottery of Choice
 
-**Votery** - Your Voice Matters
+**Lottery of Choice** - Fair, Transparent Group Decisions with a Little Suspense
 
-Votery is a trusted companion for making your voice heard through polls and surveys. The application emphasizes privacy-focused design and user-friendly interfaces for creating and participating in polls.
+Lottery of Choice is a fast, pass-and-play party game that lets any group quickly choose between any number of options. The application emphasizes transparent math, fair voting, and a suspenseful final lottery to make group decisions fun and engaging.
 
 ## Repository Contents
 
-This repository hosts the web-based documentation pages for the Votery mobile application, including:
+This repository hosts the web-based documentation pages for the Lottery of Choice mobile application, including:
 
 ### Main Pages
 
-- **`index.html`** - Landing page introducing Votery and its features
+- **`index.html`** - Landing page introducing Lottery of Choice and its features
 - **`privacy-policy.html`** - Comprehensive privacy policy detailing data collection and usage
 - **`data-protection.html`** - Detailed data protection information for GDPR compliance
 - **`styles.css`** - Styling for all documentation pages
 
 ## Features
 
-Votery offers the following key features:
+Lottery of Choice offers the following key features:
 
-- Create and participate in polls
-- Real-time results
-- Privacy-focused design
-- Easy to use interface
+- **Play & Pass**: One device, many voters - perfect for gatherings, clubs, classrooms
+- **Two Voting Modes**: Weighted voting (distribute weights) or Ranked voting (place ranked tokens)
+- **Unlimited Players & Options**: Scale it up or keep it cozy
+- **Transparent Math**: First-past-the-post results plus a suspenseful weighted final lottery
+- **Fair & Fast**: Hidden soft caps keep play quick and balanced
 
 ## Privacy & Data Protection
 
-Votery is committed to protecting user privacy and complying with data protection regulations including GDPR. Key aspects include:
+Lottery of Choice is committed to protecting user privacy and complying with data protection regulations including GDPR. Key aspects include:
 
 ### Data Collection
-- **Account Information**: Email and username for authentication
-- **Poll Data**: Votes and created polls for core functionality
+- **Game Data**: Round configurations, player names, and voting results for core functionality
 - **Device Information**: For app optimization (retained 90 days)
 - **Usage Analytics**: Anonymized data for improvements (retained 12 months)
 
