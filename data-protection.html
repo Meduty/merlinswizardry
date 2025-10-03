@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lottery of Choice Data Protection Information for Google Play">
-    <title>Data Protection - Lottery of Choice</title>
+    <meta name="description" content="Votery Data Protection Information - 100% Offline, Zero Data Collection">
+    <title>Data Protection - Votery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Lottery of Choice</h1>
+            <h1>Votery - Lottery of Choice</h1>
             <p class="tagline">Data Protection Information</p>
         </div>
     </header>
@@ -21,121 +21,287 @@
         </nav>
 
         <section class="policy-section">
-            <h2>Data Protection Information</h2>
-            <p class="last-updated">Last updated: October 2024</p>
+            <h2>Data Protection & Privacy Information</h2>
+            <p class="last-updated"><strong>Version:</strong> 1.0.2 | <strong>Last Updated:</strong> October 2024</p>
+            <p><strong>App Package:</strong> com.merlinswizardry.votery</p>
 
-            <h3>Overview</h3>
-            <p>This page provides detailed information about how Lottery of Choice handles your data, in compliance with Google Play's data protection requirements and applicable data protection laws including GDPR.</p>
+            <h3>Executive Summary</h3>
+            <p><strong>Votery</strong> is a local, offline, pass-and-play group decision-making game. The app is designed with <strong>privacy-first principles</strong> and operates entirely on-device with <strong>no network connectivity</strong> in production builds. All user data remains local to the device and is never transmitted to external servers.</p>
+            
+            <h4>Quick Privacy Facts</h4>
+            <ul>
+                <li>✅ <strong>100% Offline</strong> - No internet connectivity required or used</li>
+                <li>✅ <strong>Local Storage Only</strong> - All data stored on device</li>
+                <li>✅ <strong>No User Accounts</strong> - No registration or authentication</li>
+                <li>✅ <strong>No Analytics</strong> - No tracking or telemetry</li>
+                <li>✅ <strong>No Ads</strong> - No advertising or third-party ad networks</li>
+                <li>✅ <strong>Minimal Permissions</strong> - Only INTERNET permission for development/debug builds</li>
+                <li>✅ <strong>No PII Collection</strong> - Only user-entered names (locally stored)</li>
+            </ul>
 
-            <h3>Data Controller</h3>
-            <p>The data controller for Lottery of Choice is Merlin's Wizardry.</p>
-            <p>Contact: privacy@merlinswizardry.com</p>
+            <h3>Data Collection & Storage</h3>
+            <h4>Data Stored Locally on Device</h4>
+            <p>The app stores the following data types <strong>exclusively on the user's device</strong> using local storage mechanisms:</p>
+            
+            <h5>Player Names</h5>
+            <ul>
+                <li><strong>Type:</strong> User-entered text strings</li>
+                <li><strong>Purpose:</strong> Display player names during gameplay</li>
+                <li><strong>Storage:</strong> Hive database (local NoSQL database)</li>
+                <li><strong>Retention:</strong> Stored until manually deleted by user</li>
+                <li><strong>Location:</strong> /data/data/com.merlinswizardry.votery/ on Android</li>
+                <li><strong>Sensitivity:</strong> Low - User-chosen display names only (not verified identities)</li>
+                <li><strong>Cleanup:</strong> Automatically removes entries older than 6 months</li>
+            </ul>
 
-            <h3>Types of Data Collected</h3>
+            <h5>Option Labels</h5>
+            <ul>
+                <li><strong>Type:</strong> User-entered text strings</li>
+                <li><strong>Purpose:</strong> Display voting options during gameplay</li>
+                <li><strong>Storage:</strong> Hive database (local NoSQL database)</li>
+                <li><strong>Retention:</strong> Stored until manually deleted by user</li>
+                <li><strong>Sensitivity:</strong> Low - User-defined decision options</li>
+                <li><strong>Cleanup:</strong> Automatically removes entries older than 6 months</li>
+            </ul>
+
+            <h5>Game History</h5>
+            <ul>
+                <li><strong>Data Stored:</strong> Player names used in game, option labels, winner selection, game mode, voting results, timestamps, game duration</li>
+                <li><strong>Purpose:</strong> Display user statistics and last winner information</li>
+                <li><strong>Retention:</strong> Limited to most recent 100 game sessions</li>
+                <li><strong>Cleanup:</strong> Automatically prunes to 100 most recent sessions</li>
+            </ul>
+
+            <h5>User Statistics</h5>
+            <ul>
+                <li><strong>Data Stored:</strong> Total games played, total decisions made, favorite game mode, last played timestamp, last winner information</li>
+                <li><strong>Purpose:</strong> Display gameplay statistics to user</li>
+                <li><strong>Storage:</strong> Hive database (local NoSQL database)</li>
+            </ul>
+
+            <h5>App Settings/Preferences</h5>
+            <ul>
+                <li><strong>Data Stored:</strong> Animation speed preferences, game rule toggles, UI preferences, timer settings</li>
+                <li><strong>Storage:</strong> SharedPreferences (Android key-value storage)</li>
+                <li><strong>Purpose:</strong> Persist user preferences across app sessions</li>
+                <li><strong>Sensitivity:</strong> None - purely UI/gameplay preferences</li>
+            </ul>
+
+            <h4>Data NOT Collected</h4>
+            <p>The app explicitly does <strong>NOT</strong> collect, store, or transmit:</p>
+            <ul>
+                <li>❌ Personal Identifiable Information (PII) beyond user-entered names</li>
+                <li>❌ Email addresses</li>
+                <li>❌ Phone numbers</li>
+                <li>❌ Location data</li>
+                <li>❌ Device identifiers (IMEI, Android ID, etc.)</li>
+                <li>❌ Contacts or contact lists</li>
+                <li>❌ Photos or media files</li>
+                <li>❌ Browsing history</li>
+                <li>❌ Usage analytics or telemetry</li>
+                <li>❌ Crash reports</li>
+                <li>❌ Advertising IDs</li>
+                <li>❌ Financial information</li>
+                <li>❌ Health data</li>
+                <li>❌ Biometric data</li>
+            </ul>
+
+            <h3>Network Activity & Permissions</h3>
+            <h4>Android Permissions</h4>
+            <p><strong>Production Build (Release):</strong></p>
+            <ul>
+                <li><strong>INTERNET permission:</strong> Not used in production
+                    <ul>
+                        <li>Present in debug/profile manifests only for Flutter hot reload functionality</li>
+                        <li>NOT present in release APK</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Other Permissions:</strong> None - The app requests <strong>no additional permissions</strong></p>
+
+            <h4>Network Connectivity</h4>
+            <p><strong>Production Release:</strong></p>
+            <ul>
+                <li>✅ <strong>Zero network calls</strong> - The app makes no HTTP/HTTPS requests</li>
+                <li>✅ <strong>No web sockets</strong> - No real-time connections</li>
+                <li>✅ <strong>No API calls</strong> - No external service integrations</li>
+                <li>✅ <strong>Fully offline</strong> - Can operate in airplane mode</li>
+            </ul>
+
+            <p><strong>Google Fonts Note:</strong> The google_fonts package is used for typography, but fonts are bundled with the app in the assets folder. No runtime font downloads occur.</p>
+
+            <h3>Third-Party Dependencies</h3>
+            <p>All dependencies have been reviewed for data protection implications. The app uses the following privacy-safe dependencies:</p>
+            <ul>
+                <li><strong>flutter_riverpod:</strong> State management - No network activity, no data collection</li>
+                <li><strong>go_router:</strong> Navigation - Local navigation only</li>
+                <li><strong>hive & hive_flutter:</strong> Local NoSQL database - All data stored locally</li>
+                <li><strong>shared_preferences:</strong> Key-value storage - All data stored locally</li>
+                <li><strong>uuid:</strong> Generate unique identifiers - Local generation only</li>
+                <li><strong>google_fonts:</strong> Typography - Fonts pre-bundled, no runtime downloads</li>
+            </ul>
+            <p><strong>Important:</strong> None of these dependencies collect, transmit, or share any user data.</p>
+
+            <h3>Data Processing & Purpose</h3>
             <table class="data-table">
                 <thead>
                     <tr>
                         <th>Data Type</th>
                         <th>Purpose</th>
-                        <th>Legal Basis</th>
-                        <th>Retention Period</th>
+                        <th>Processing</th>
+                        <th>Sharing</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Game Data (player names, round options, votes)</td>
-                        <td>Core app functionality for running voting rounds</td>
-                        <td>Legitimate interest</td>
-                        <td>Session-based (deleted after round completion)</td>
+                        <td>Player Names</td>
+                        <td>Display during gameplay, populate suggestions</td>
+                        <td>Local only</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <td>Device Information</td>
-                        <td>App optimization and bug fixing</td>
-                        <td>Legitimate interest</td>
-                        <td>90 days</td>
+                        <td>Option Labels</td>
+                        <td>Display during voting, populate suggestions</td>
+                        <td>Local only</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <td>Usage Analytics</td>
-                        <td>App improvement and feature development</td>
-                        <td>Legitimate interest</td>
-                        <td>12 months</td>
+                        <td>Game History</td>
+                        <td>Show statistics, last winner</td>
+                        <td>Local aggregation</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>Vote Results</td>
+                        <td>Calculate winner, show results</td>
+                        <td>Local computation</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>Settings</td>
+                        <td>Customize user experience</td>
+                        <td>Local storage</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
             </table>
 
-            <h3>Data Processing Activities</h3>
-            <h4>Collection</h4>
-            <p>Data is collected directly from users through the app interface and automatically through app usage.</p>
+            <h4>Data Deletion</h4>
+            <p>Users can delete their data through:</p>
+            <ol>
+                <li><strong>Settings → Reset to Defaults</strong> - Clears all settings</li>
+                <li><strong>Inventory Management</strong> - Delete individual players/options</li>
+                <li><strong>App Uninstall</strong> - Removes all app data (standard Android behavior)</li>
+                <li><strong>Clear App Data</strong> - Android system settings → Apps → Votery → Clear Data</li>
+            </ol>
 
-            <h4>Storage</h4>
-            <p>All data is stored on secure servers with encryption at rest and in transit. We use industry-standard security measures to protect your information.</p>
-
-            <h4>Processing</h4>
-            <p>Your data is processed to provide the app's core functionality, including creating voting rounds, collecting votes from players, calculating results, and running the Final Lottery to determine winners.</p>
-
-            <h4>Sharing</h4>
-            <p>We do not sell or rent your personal data. Data may be shared only with:</p>
+            <h3>Data Security</h3>
+            <h4>Security Measures</h4>
             <ul>
-                <li>Service providers who help us operate the app (under strict confidentiality agreements)</li>
-                <li>Legal authorities when required by law</li>
+                <li><strong>App Sandbox:</strong> Data stored in Android app-private directory (only accessible by app)</li>
+                <li><strong>No Network Exposure:</strong> Zero attack surface from network vulnerabilities</li>
+                <li><strong>No Cloud Storage:</strong> No synchronization with external services</li>
+                <li><strong>Standard Android Permissions:</strong> App data protected by Android OS permissions</li>
+                <li><strong>No Third-Party SDKs:</strong> No analytics, ads, or tracking SDKs that could leak data</li>
             </ul>
 
-            <h3>User Rights (GDPR)</h3>
-            <p>Under GDPR and other data protection laws, you have the following rights:</p>
+            <h4>Recommendations for Sensitive Use Cases</h4>
+            <p>If users plan to use the app with sensitive information:</p>
             <ul>
-                <li><strong>Right to Access:</strong> Request a copy of your personal data</li>
-                <li><strong>Right to Rectification:</strong> Correct inaccurate personal data</li>
-                <li><strong>Right to Erasure:</strong> Request deletion of your personal data</li>
-                <li><strong>Right to Restrict Processing:</strong> Limit how we use your data</li>
-                <li><strong>Right to Data Portability:</strong> Receive your data in a structured format</li>
-                <li><strong>Right to Object:</strong> Object to certain processing activities</li>
-                <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time</li>
+                <li>Disable Android cloud backups for this app</li>
+                <li>Use device-level encryption (enabled by default on modern Android)</li>
+                <li>Clear app data after sensitive voting sessions</li>
+                <li>Consider using generic placeholder names instead of real names</li>
             </ul>
 
-            <h3>How to Exercise Your Rights</h3>
-            <p>To exercise any of these rights, please contact us at privacy@merlinswizardry.com. We will respond to your request within 30 days.</p>
-
-            <h3>Data Breach Procedures</h3>
-            <p>In the event of a data breach that affects your personal information, we will:</p>
+            <h3>Child Privacy (COPPA Compliance)</h3>
             <ul>
-                <li>Notify affected users within 72 hours of discovery</li>
-                <li>Report to relevant supervisory authorities as required</li>
-                <li>Take immediate steps to mitigate the breach</li>
-                <li>Provide information about the breach and protective measures</li>
+                <li>App is suitable for all ages</li>
+                <li>No age verification required</li>
+                <li>App does not knowingly collect data from children</li>
+                <li>No registration or account creation</li>
+                <li>Parents should supervise if children use the app</li>
             </ul>
 
-            <h3>Third-Party Services</h3>
-            <p>Lottery of Choice may use the following third-party services:</p>
+            <h3>GDPR Considerations</h3>
+            <h4>Data Controller</h4>
             <ul>
-                <li><strong>Analytics:</strong> To understand app usage patterns (anonymized data only)</li>
-                <li><strong>Cloud Hosting:</strong> To store and process data securely</li>
-            </ul>
-            <p>All third-party processors are carefully selected and contractually obligated to protect your data.</p>
-
-            <h3>Cookies and Tracking</h3>
-            <p>The Lottery of Choice mobile app does not use cookies. However, we may collect device identifiers for analytics purposes. You can opt out of analytics in the app settings.</p>
-
-            <h3>International Data Transfers</h3>
-            <p>If your data is transferred outside the European Economic Area (EEA), we ensure appropriate safeguards are in place, such as:</p>
-            <ul>
-                <li>Standard Contractual Clauses (SCCs)</li>
-                <li>Adequacy decisions by the European Commission</li>
+                <li><strong>Users are the data controllers</strong> - they enter and control all data</li>
+                <li><strong>Developer has no access</strong> to user data</li>
+                <li><strong>No data processing agreements</strong> needed (no data leaves device)</li>
             </ul>
 
-            <h3>Children's Data Protection</h3>
-            <p>Lottery of Choice is not directed to children under 13 years of age. We do not knowingly collect data from children. If we learn that we have collected data from a child under 13, we will delete it immediately.</p>
+            <h4>User Rights</h4>
+            <p>Under GDPR, users have the following rights (all supported):</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Right</th>
+                        <th>How to Exercise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Right to Access</td>
+                        <td>All data visible in app UI</td>
+                    </tr>
+                    <tr>
+                        <td>Right to Rectification</td>
+                        <td>Edit names/options directly in app</td>
+                    </tr>
+                    <tr>
+                        <td>Right to Erasure</td>
+                        <td>Delete individual items or uninstall app</td>
+                    </tr>
+                    <tr>
+                        <td>Right to Data Portability</td>
+                        <td>No export feature currently, but could be added</td>
+                    </tr>
+                    <tr>
+                        <td>Right to Object</td>
+                        <td>N/A - no automated decision making</td>
+                    </tr>
+                    <tr>
+                        <td>Right to Restriction</td>
+                        <td>Stop using app or clear data</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <h3>Data Retention Policy</h3>
-            <p>We retain personal data only for as long as necessary to fulfill the purposes outlined in this policy or as required by law. You can request deletion of your account and data at any time through the app settings or by contacting us.</p>
+            <h3>Google Play Data Safety Requirements</h3>
+            <h4>Data Safety Section Answers</h4>
+            <p><strong>Does your app collect or share any of the required user data types?</strong></p>
+            <p><strong>Answer: NO</strong></p>
+            
+            <p><strong>Reasoning:</strong></p>
+            <ul>
+                <li>User-entered names are not verified PII</li>
+                <li>All data is local, never transmitted</li>
+                <li>No sharing with third parties</li>
+                <li>No data leaves the device</li>
+            </ul>
 
-            <h3>Automated Decision-Making</h3>
-            <p>Lottery of Choice does not use automated decision-making or profiling that produces legal effects or similarly significantly affects users.</p>
+            <p><strong>Conservative Declaration (if required):</strong></p>
+            <ul>
+                <li><strong>Data Collected:</strong> Optional user-provided names and game interaction data</li>
+                <li><strong>Data Shared:</strong> None</li>
+                <li><strong>Data Security:</strong> Stored on device only, protected by app sandbox</li>
+                <li><strong>Data Deletion:</strong> Delete via app features or uninstall</li>
+            </ul>
 
-            <h3>Updates to Data Protection Practices</h3>
-            <p>We regularly review and update our data protection practices to ensure compliance with applicable laws and regulations. Any material changes will be communicated to users through the app or email.</p>
-
-            <h3>Supervisory Authority</h3>
-            <p>If you believe your data protection rights have been violated, you have the right to lodge a complaint with your local data protection supervisory authority.</p>
+            <h3>Summary</h3>
+            <p>Votery is designed with privacy as a core principle. All data remains local to the user's device, and the app operates entirely offline. This architecture minimizes privacy risks and ensures users maintain full control over their data.</p>
+            
+            <p><strong>Key Takeaways:</strong></p>
+            <ul>
+                <li>✅ <strong>No data leaves the device</strong> - Complete offline operation</li>
+                <li>✅ <strong>No third-party tracking</strong> - Zero analytics or telemetry</li>
+                <li>✅ <strong>Minimal data collection</strong> - Only user-entered names and game results</li>
+                <li>✅ <strong>User control</strong> - Users can delete data anytime</li>
+                <li>✅ <strong>No sensitive permissions</strong> - INTERNET only in debug builds</li>
+                <li>✅ <strong>GDPR/COPPA friendly</strong> - Minimal compliance burden</li>
+                <li>✅ <strong>Google Play ready</strong> - Meets all store requirements</li>
+            </ul>
 
             <h3>Contact Information</h3>
             <p>For any questions or concerns about data protection, please contact:</p>
